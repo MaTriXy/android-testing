@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-apply plugin: 'com.android.application'
+apply plugin: "com.android.application"
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion 30
+    buildToolsVersion = rootProject.buildToolsVersion
     defaultConfig {
         applicationId "com.example.android.testing.unittesting.BasicSample"
-        minSdkVersion 8
+        minSdkVersion 14
         versionCode 1
         versionName "1.0"
-        targetSdkVersion 24
+        targetSdkVersion 30
     }
     productFlavors {
     }
@@ -32,6 +32,6 @@ android {
 
 dependencies {
     // Unit testing dependencies.
-    testCompile 'junit:junit:' + rootProject.junitVersion;
-    testCompile 'org.mockito:mockito-core:' + rootProject.mockitoVersion;
+    testImplementation "junit:junit:" + rootProject.junitVersion;
+    testImplementation "org.mockito:mockito-core:" + rootProject.mockitoVersion;
 }
